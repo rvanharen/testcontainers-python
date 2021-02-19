@@ -93,7 +93,6 @@ class DockerContainer(object):
 
             if gateway_ip == host:
                 return self.get_docker_client().bridge_ip(self._container.id)
-            return gateway_ip
         return host
 
     def get_exposed_port(self, port) -> str:
